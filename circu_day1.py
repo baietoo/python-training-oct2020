@@ -1,5 +1,3 @@
-from datetime import datetime
-
 # Last digit
 print(123 % 10)
 
