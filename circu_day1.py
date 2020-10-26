@@ -2,15 +2,15 @@
 print(123 % 10)
 
 # sum of digits
-sumOfDigits = 0
-myNbr = 123
-for x in range(len(str(myNbr))):
-    sumOfDigits = sumOfDigits + myNbr % 10
-    myNbr = myNbr // 10
-print(sumOfDigits)
+sum_of_digits = 0
+my_nbr = 123
+while my_nbr:
+    sum_of_digits += my_nbr % 10
+    my_nbr = my_nbr // 10
+print(sum_of_digits)
 
 # hours and minutes since midnight
-N = 370
+N = 570
 hours = N // 60
 minutes = N % 60
 print(str(hours) + " " + str(minutes))
@@ -28,6 +28,8 @@ for i in range(len(s)):
     if s[i] == "q":
         print("q found at positon: " + str(i))
 
+print("n found at: " + str(s.find("n")))
+
 # "an" occurences
 print("'An' appears in s " + str(s.count("an")) + " time(s).")
 
@@ -41,7 +43,7 @@ if s.isalnum():
 # abcdefghijklmn exercises
 myString = "abcdefghijklmn"
 # third character
-print((myString[2])
+print(myString[2])
 # second to last
 print(myString[-2])
 # first five
@@ -55,3 +57,28 @@ print("Odd Tod: " + myString[1::2])
 print(myString[::-1])
 # reverse odd indices string
 print(myString[::-2])
+
+# control structures
+# driver speed
+driver_speed = 190
+if driver_speed <= 50:
+    print('ok')
+else:
+    points = (driver_speed - 50) // 5
+    if points > 12:
+        print("License Suspended")
+    else:
+        print("Points: " + str((driver_speed - 50) // 5))
+
+    # Fizz Buzz
+    for i in range(1, 50):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        elif i == 30:
+            break
+        else:
+            print(i)
