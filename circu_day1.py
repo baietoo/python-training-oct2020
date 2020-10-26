@@ -41,7 +41,7 @@ if s.isalnum():
 # abcdefghijklmn exercises
 myString = "abcdefghijklmn"
 # third character
-print(str(myString[2]))
+print((myString[2])
 # second to last
 print(myString[-2])
 # first five
@@ -49,15 +49,8 @@ print(myString[:5])
 # all but last 2
 print(myString[:-2])
 # all even and odd indices
-evenSteven = ""
-oddTodd = ""
-for i in range(len(myString)):
-    if i % 2 == 0:
-        evenSteven += myString[i]
-    else:
-        oddTodd += myString[i]
-print("Even Steven: " + evenSteven)
-print("Odd Tod: " + oddTodd)
+print("Even Steven: " + myString[0::2])
+print("Odd Tod: " + myString[1::2])
 # reverse string
 print(myString[::-1])
 # reverse odd indices string
