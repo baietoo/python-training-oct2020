@@ -1,18 +1,16 @@
-from datetime import datetime
-
 # Last digit
 print(123 % 10)
 
 # sum of digits
-sumOfDigits = 0
-myNbr = 123
-for x in range(len(str(myNbr))):
-    sumOfDigits = sumOfDigits + myNbr % 10
-    myNbr = myNbr // 10
-print(sumOfDigits)
+sum_of_digits = 0
+my_nbr = 123
+while my_nbr:
+    sum_of_digits += my_nbr % 10
+    my_nbr = my_nbr // 10
+print(sum_of_digits)
 
 # hours and minutes since midnight
-N = 370
+N = 570
 hours = N // 60
 minutes = N % 60
 print(str(hours) + " " + str(minutes))
@@ -30,6 +28,8 @@ for i in range(len(s)):
     if s[i] == "q":
         print("q found at positon: " + str(i))
 
+print("n found at: " + str(s.find("n")))
+
 # "an" occurences
 print("'An' appears in s " + str(s.count("an")) + " time(s).")
 
@@ -43,7 +43,7 @@ if s.isalnum():
 # abcdefghijklmn exercises
 myString = "abcdefghijklmn"
 # third character
-print(str(myString[2]))
+print(myString[2])
 # second to last
 print(myString[-2])
 # first five
@@ -51,16 +51,32 @@ print(myString[:5])
 # all but last 2
 print(myString[:-2])
 # all even and odd indices
-evenSteven = ""
-oddTodd = ""
-for i in range(len(myString)):
-    if i % 2 == 0:
-        evenSteven += myString[i]
-    else:
-        oddTodd += myString[i]
-print("Even Steven: " + evenSteven)
-print("Odd Tod: " + oddTodd)
+print("Even Steven: " + myString[0::2])
+print("Odd Tod: " + myString[1::2])
 # reverse string
 print(myString[::-1])
 # reverse odd indices string
 print(myString[::-2])
+
+# control structures
+# driver speed
+driver_speed = 190
+if driver_speed <= 50:
+    print('ok')
+else:
+    points = (driver_speed - 50) // 5
+    if points > 12:
+        print("License Suspended")
+    else:
+        print("Points: " + str((driver_speed - 50) // 5))
+
+    # Fizz Buzz
+    for i in range(1, 50):
+        result = ''
+        if i == 30:
+            break
+        if i % 3 == 0:
+            result += "Fizz"
+        if i % 5 == 0:
+            result += "Buzz"
+        print(result or i)
