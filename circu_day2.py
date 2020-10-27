@@ -32,18 +32,16 @@ l.sort()
 print(f"Sorted list: {l}.")  # l.sort() doesn't work in an f string
 
 # Remove all items on positions divisible by 3
-i = 0
-for elem in l:
-    if i % 3 == 0 and i != 0:
-        l.remove(elem)
-    i += 1
+del l[::3]
 print(f"list after removing indices div by 3: {l}.")
 
 # Write a Python program to convert a list of characters into a string.
 char_list = ['o', 'h', 'n', 'g', ' ', 'a', 'w', 'd']
 print(f"Joined list: {''.join(char_list)}.")
 # Write a Python program to find the second smallest number in a list.
+l = list(dict.fromkeys(l))
 l.sort()
+print(l)
 print(f"second smallest number: {l[1]}.")
 
 # Sets exercises
