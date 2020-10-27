@@ -65,7 +65,6 @@ s.clear()
 # A word = a sequence of characters that is not whitespace(space, newline, tab).
 
 # E.g.
-
 my_string = """beautiful is better than ugly
 explicit is better than implicit
 simple is better than complex
@@ -75,22 +74,31 @@ sparse is better than dense"""
 # # Should print: 14 distinct words
 
 oh_my_words = set()
-oh_my_words.update(my_string.split(" "))
+oh_my_words.update(my_string.split())
 print(f"length of unique items: {len(oh_my_words)}.")
 
 
 # Dicts exercises
 # Given the following dictionary:
 
-# d = {
-#     'times': 100,
-#     'name': 'George',
-#     'hobbies': ['fishing', 'hiking'],
-# }
+d = {
+    'times': 100,
+    'name': 'George',
+    'hobbies': ['fishing', 'hiking'],
+}
 # add key 'friends' to d with ['Andrei', 'Mihai', 'Alina'] as value
+d["friends"] = ['Andrei', 'Mihai', 'Alina']
 # sort value for key 'friends'
+d['friends'].sort()
 # remove 'hiking' from hobbies list
+d["hobbies"].remove('hiking')
 # remove 'times' key from d
+del d['times']
+print(d)
 # Given a list of strings build a dictionary that has each unique string as a key and the number of appearances as a value.
-
 # E.g. ['hello', 'hello', 'is', 'there', 'anybody', 'in', 'there'] -> {'hello': 2, 'is': 1, 'there': 2, 'anybody': 1, 'in': 1}
+string_list = ['hello', 'hello', 'is', 'there', 'anybody', 'in', 'there']
+string_dict = {}
+for string in string_list:
+    string_dict[string] = string_list.count(string)
+print(f"Final dictionary: {string_dict}.")
