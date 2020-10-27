@@ -39,31 +39,46 @@ print(f"list after removing indices div by 3: {l}.")
 char_list = ['o', 'h', 'n', 'g', ' ', 'a', 'w', 'd']
 print(f"Joined list: {''.join(char_list)}.")
 # Write a Python program to find the second smallest number in a list.
+
 l = list(dict.fromkeys(l))
 l.sort()
 print(l)
 print(f"second smallest number: {l[1]}.")
 
+
 # Sets exercises
 # Given the following set:
 
-# s = set()
+s = set()
 # Add elements from [1, 2, 3] to the set
+s.update([1, 2, 3])
 # Print the length of the set
+print(f"Set length: {len(s)}.")
 # Check if 4 is in the set
+print(f"Is 4 in set? {4 in s}.")
 # Remove and print an arbitrary element from the set
+print(f"arbitrary elem from set: {s.pop()}")
 # Remove all remaining items in the set
-# Write a Python program that counts the number of distinct words from a string. A word = a sequence of characters that is not whitespace(space, newline, tab).
+s.clear()
+
+# Write a Python program that counts the number of distinct words from a string.
+# A word = a sequence of characters that is not whitespace(space, newline, tab).
 
 # E.g.
 
-# my_str = """beautiful is better than ugly
-# explicit is better than implicit
-# simple is better than complex
-# complex is better than complicated
-# flat is better than nested
-# sparse is better than dense"""
+my_string = """beautiful is better than ugly
+explicit is better than implicit
+simple is better than complex
+complex is better than complicated
+flat is better than nested
+sparse is better than dense"""
 # # Should print: 14 distinct words
+
+oh_my_words = set()
+oh_my_words.update(my_string.split(" "))
+print(f"length of unique items: {len(oh_my_words)}.")
+
+
 # Dicts exercises
 # Given the following dictionary:
 
